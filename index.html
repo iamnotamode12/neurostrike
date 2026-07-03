@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,56 +15,309 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- ================= LOADING SCREEN ================= -->
 
-<nav>
-    <div class="logo">🧠 NeuroStrike</div>
+<div id="loader">
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-<li><a href="#bcis">BCIs</a></li>
-<li><a href="#ethics">Ethics</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#about">About</a></li>
-    </ul>
-</nav>
+    <div class="loader-content">
 
-<main class="hero" id="home">
+        <div class="loader-brain">🧠</div>
 
-    <div class="brain">
-        🧠
+        <h1>NeuroStrike</h1>
+
+        <p id="loadingText">
+
+            Initializing Neural Network...
+
+        </p>
+
+        <div class="progress-bar">
+
+            <div class="progress-fill"></div>
+
+        </div>
+
     </div>
 
-    <h1>NeuroStrike</h1>
+</div>
+    <canvas id="network"></canvas>
+   <div class="cursor-glow"></div>
+    <!-- ================= NAVIGATION ================= -->
 
-    <h2>Can AI Read Your Mind?</h2>
+    <nav>
+
+        <div class="logo"> NeuroStrike</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bcis">BCIs</a></li>
+            <li><a href="#signal">How it Works</a></li>
+        </ul>
+        <div class="theme-toggle" id="themeToggle">
+    🌙
+</div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <main class="hero" id="home">
+
+        <div class="brain-container">
+
+<svg class="brain-svg"
+viewBox="0 0 500 500">
+
+<path
+class="brain-outline"
+
+d="M160 120
+C120 120 90 170 110 210
+C70 250 90 320 150 330
+C170 380 250 390 250 350
+C250 390 330 380 350 330
+C410 320 430 250 390 210
+C410 170 380 120 340 120
+C310 80 190 80 160 120"
+
+fill="none"
+/>
+
+</svg>
+
+</div>
+
+        <h1>NeuroStrike</h1>
+
+        <h2>Can AI Read Your Mind?</h2>
+
+        <p>
+            Explore the science.<br>
+            Understand the ethics.<br>
+            Shape the future.
+        </p>
+
+        <button id="startBtn">
+            Start Exploring →
+        </button>
+
+    </main>
+
+    <!-- ================= BCI SECTION ================= -->
+
+    <section id="bcis" class="section">
+
+        <h2>🧠 What is a Brain-Computer Interface?</h2>
+
+        <p>
+            A Brain-Computer Interface (BCI) creates a direct communication pathway
+            between the brain and an external device.
+
+            BCIs are helping people regain movement, communicate without speaking,
+            and may completely transform the future of human-computer interaction.
+        </p>
+
+    </section>
+
+    <!-- ================= SIGNAL SECTION ================= -->
+
+   <!-- ================= HOW DOES A BCI WORK ================= -->
+
+<section id="signal" class="section">
+
+    <h2>How Does a BCI Work?</h2>
+
+    <div class="signal-container">
+
+        <div class="brain-icon">
+            🧠
+        </div>
+
+        <div class="signal"></div>
+
+        <div class="computer-icon">
+            💻
+        </div>
+
+    </div>
 
     <p>
-        Explore the science.<br>
-        Understand the ethics.<br>
-        Shape the future.
-    </p>
-
-    <a href="#bcis">
-    <button id="startBtn">
-        Start Exploring →
-    </button>
-</a>
-
-</main>
-<section id="bcis" class="section">
-
-    <h2>🧠 What is a Brain-Computer Interface?</h2>
-
-    <p>
-        A Brain-Computer Interface (BCI) is a system that creates a direct
-        communication pathway between the brain and an external device.
-        BCIs can help restore movement, enable communication, and may
-        transform how humans interact with technology.
+        Brain signals are detected, decoded using AI algorithms,
+        and translated into commands that computers understand.
     </p>
 
 </section>
-<script src="script.js"></script>
 
+
+
+<!-- ================= MYTH VS FACT ================= -->
+
+<section id="myths" class="section">
+
+    <h2>Myth vs Fact</h2>
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+
+        <div class="flip-card">
+
+            <div class="flip-inner">
+
+                <div class="flip-front">
+
+                    <h3>❌ MYTH</h3>
+
+                    <p>BCIs can read every thought in your brain.</p>
+
+                    <span>Click Me 👆</span>
+
+                </div>
+
+                <div class="flip-back">
+
+                    <h3>✅ FACT</h3>
+
+                    <p>
+                        Current BCIs decode specific neural signals,
+                        not every thought or memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="flip-card">
+
+            <div class="flip-inner">
+
+                <div class="flip-front">
+
+                    <h3>❌ MYTH</h3>
+
+                    <p>BCIs are only used for mind control.</p>
+
+                    <span>Click Me 👆</span>
+
+                </div>
+
+                <div class="flip-back">
+
+                    <h3>✅ FACT</h3>
+
+                    <p>
+                        Most BCIs are designed to restore communication,
+                        movement, or assist people with disabilities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AI BIAS SIMULATOR ================= -->
+
+<section id="bias" class="section">
+
+    <h2>AI Bias Simulator</h2>
+
+    <p>
+        Move the slider to change how diverse the AI's training data is.
+    </p>
+
+    <div class="bias-box">
+
+        <h3>Training Data Diversity</h3>
+
+        <input
+            type="range"
+            min="0"
+            max="100"
+            value="100"
+            id="biasSlider"
+        >
+
+        <h1 id="accuracy">Accuracy: 98%</h1>
+
+        <p id="biasText">
+            The model performs well across many different people because
+            it was trained on diverse data.
+        </p>
+
+    </div>
+
+</section>
+<!-- ================= TIMELINE ================= -->
+
+<section id="timeline" class="section">
+
+    <h2>History of Brain-Computer Interfaces</h2>
+
+   <div class="timeline">
+
+    <div class="timeline-progress"></div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <h3>1924</h3>
+                <p>Hans Berger records the first human EEG.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <h3>1973</h3>
+                <p>The term "Brain-Computer Interface" begins appearing in research.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <h3>2004</h3>
+                <p>BCIs begin helping people communicate using only brain signals.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Neuralink begins early human clinical trials.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+                <h3>Future</h3>
+                <p>Safe, ethical BCIs could transform medicine, accessibility, and communication.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<script src="script.js"></script>
 </body>
 </html>
